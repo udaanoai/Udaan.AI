@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UDAAN AI — AI-powered workforce intelligence for frontline employees.">
+  <title>UDAAN AI | Workforce Intelligence for the Frontline</title>
+  <style>
+    :root{
+      --navy:#0b1730; --blue:#2563eb; --teal:#0f766e; --ink:#14213d;
+      --muted:#64748b; --line:#e6eaf0; --soft:#f6f8fb; --white:#fff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eef1f5;background:rgba(255,255,255,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(10px)}
+    .brand{font-size:22px;font-weight:800;letter-spacing:.08em;color:var(--navy)}
+    .brand span{color:var(--blue)}
+    .navlinks{display:flex;gap:28px;font-size:14px;color:#475569}
+    .navlinks a:hover{color:var(--blue)}
+    .navcta{padding:10px 17px;border-radius:9px;background:var(--navy);color:#fff;font-weight:600}
+    .hero{padding:104px 0 92px;background:linear-gradient(180deg,#fbfcfe 0%,#fff 100%)}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid #dce5f5;border-radius:999px;background:#f8fbff;color:#2856a6;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--blue)}
+    h1{font-size:clamp(46px,6vw,76px);line-height:1.02;letter-spacing:-.055em;max-width:850px;margin:25px 0 24px;color:var(--navy)}
+    .hero p{font-size:20px;line-height:1.65;color:#526174;max-width:700px}
+    .buttons{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+    .btn{padding:13px 19px;border-radius:9px;font-weight:700;border:1px solid var(--navy)}
+    .btn.primary{background:var(--navy);color:#fff}
+    .btn.secondary{background:#fff;color:var(--navy)}
+    section{padding:88px 0}
+    .soft-section{background:var(--soft)}
+    .section-label{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);font-weight:800;margin-bottom:12px}
+    h2{font-size:clamp(31px,4vw,48px);line-height:1.1;letter-spacing:-.035em;color:var(--navy);max-width:760px}
+    .lead{color:var(--muted);font-size:18px;max-width:720px;margin-top:17px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:42px}
+    .card{border:1px solid var(--line);border-radius:16px;padding:25px;background:#fff}
+    .card h3{font-size:18px;color:var(--navy);margin-bottom:8px}
+    .card p{font-size:14px;color:var(--muted)}
+    .number{font-size:12px;font-weight:800;color:var(--blue);margin-bottom:20px}
+    .platform{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+    .module-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .module{padding:17px 18px;border:1px solid var(--line);border-radius:12px;background:#fff;font-weight:700;color:var(--navy)}
+    .workflow{margin-top:45px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:stretch}
+    .step{position:relative;padding:22px 17px;border:1px solid var(--line);border-radius:14px;background:#fff}
+    .step:not(:last-child)::after{content:"→";position:absolute;right:-17px;top:35%;color:#94a3b8;font-size:22px;z-index:2}
+    .step strong{display:block;color:var(--navy);margin:7px 0}
+    .step small{color:var(--muted)}
+    .value-grid{grid-template-columns:repeat(4,1fr)}
+    .industries{display:flex;flex-wrap:wrap;gap:12px;margin-top:35px}
+    .industry{padding:12px 17px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--navy);font-weight:650}
+    .cta{background:var(--navy);color:#fff;text-align:center;padding:86px 0}
+    .cta h2{color:#fff;margin:auto}
+    .cta p{color:#c7d0df;max-width:600px;margin:18px auto 0}
+    .cta .btn{margin-top:30px;background:#fff;color:var(--navy);border-color:#fff}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:#718096;font-size:13px}
+    footer .container{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:850px){
+      .navlinks{display:none}.grid,.value-grid{grid-template-columns:repeat(2,1fr)}
+      .platform{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}
+      .step:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-24px}
+    }
+    @media(max-width:560px){
+      .hero{padding:76px 0 68px} section{padding:65px 0}
+      .grid,.value-grid,.module-grid{grid-template-columns:1fr}
+      h1{font-size:48px}.hero p{font-size:17px}
+      footer .container{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between">
+      <a class="brand" href="#">UDAAN<span>AI</span></a>
+      <div class="navlinks">
+        <a href="#platform">Platform</a>
+        <a href="#employers">Employers</a>
+        <a href="#workers">Workers</a>
+        <a href="#industries">Industries</a>
+      </div>
+      <a class="navcta" href="#contact">Request a Demo</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow"><span class="dot"></span> Workforce intelligence for the frontline</div>
+        <h1>AI-powered workforce intelligence for frontline employees.</h1>
+        <p>UDAAN helps employers understand, engage and support their frontline workforce through intelligent AI assistance and human intervention.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#contact">Request a Demo</a>
+          <a class="btn secondary" href="#platform">Explore UDAAN</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section">
+      <div class="container">
+        <div class="section-label">The challenge</div>
+        <h2>Frontline workforce management is fragmented.</h2>
+        <p class="lead">Attendance, HR requests, welfare, health, grievances, salary queries and employee engagement are often managed through disconnected processes.</p>
+        <div class="grid">
+          <div class="card"><div class="number">01</div><h3>Fragmented support</h3><p>Employees navigate multiple channels for everyday workforce needs.</p></div>
+          <div class="card"><div class="number">02</div><h3>Limited visibility</h3><p>Employers have limited visibility into recurring workforce needs and issues.</p></div>
+          <div class="card"><div class="number">03</div><h3>Workforce friction</h3><p>Small unresolved issues can become repeated operational challenges.</p></div>
+          <div class="card"><div class="number">04</div><h3>Disconnected data</h3><p>Workforce interactions and outcomes can remain scattered across systems.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform">
+      <div class="container platform">
+        <div>
+          <div class="section-label">The platform</div>
+          <h2>One intelligent layer across the frontline workforce experience.</h2>
+          <p class="lead">UDAAN brings common workforce interactions into one simple, AI-enabled experience for employees, supervisors and employers.</p>
+        </div>
+        <div class="module-grid">
+          <div class="module">Attendance</div><div class="module">HR Support</div>
+          <div class="module">Salary</div><div class="module">Health</div>
+          <div class="module">Insurance</div><div class="module">Grievance & Feedback</div>
+          <div class="module">Career Development</div><div class="module">Workforce Insights</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft-section">
+      <div class="container">
+        <div class="section-label">How it works</div>
+        <h2>AI assists. Humans intervene where it matters.</h2>
+        <p class="lead">UDAAN is designed around a Human + AI intervention model — using AI for scale while keeping human support available for situations that require it.</p>
+        <div class="workflow">
+          <div class="step"><div class="number">01</div><strong>Employee interaction</strong><small>A worker asks, reports or requests support.</small></div>
+          <div class="step"><div class="number">02</div><strong>UDAAN AI</strong><small>The request is understood and routed intelligently.</small></div>
+          <div class="step"><div class="number">03</div><strong>AI assistance</strong><small>Routine questions and actions are handled quickly.</small></div>
+          <div class="step"><div class="number">04</div><strong>Human intervention</strong><small>Complex or sensitive cases can reach the right person.</small></div>
+          <div class="step"><div class="number">05</div><strong>Employer insights</strong><small>Patterns and outcomes become visible to management.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="employers">
+      <div class="container">
+        <div class="section-label">For employers</div>
+        <h2>Turn workforce challenges into measurable business outcomes.</h2>
+        <p class="lead">UDAAN is designed to help employers create a more responsive frontline workforce experience while building visibility into workforce needs.</p>
+        <div class="grid value-grid">
+          <div class="card"><h3>Improve retention</h3><p>Identify recurring employee concerns earlier and enable timely intervention.</p></div>
+          <div class="card"><h3>Increase engagement</h3><p>Make workforce support easier to access through simple conversational experiences.</p></div>
+          <div class="card"><h3>Reduce friction</h3><p>Streamline repetitive workforce interactions across common employee needs.</p></div>
+          <div class="card"><h3>Measure impact</h3><p>Surface workforce patterns, interventions and outcomes for management visibility.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workers" class="soft-section">
+      <div class="container platform">
+        <div>
+          <div class="section-label">For frontline employees</div>
+          <h2>One simple interface. Multiple workforce needs.</h2>
+          <p class="lead">Workers can access information and support using straightforward conversational interactions.</p>
+        </div>
+        <div class="card">
+          <p style="margin-bottom:13px;color:#334155;font-weight:700">Example interactions</p>
+          <p>“Where can I see my salary?”</p>
+          <p>“I need help with my accommodation.”</p>
+          <p>“I want to raise a grievance.”</p>
+          <p>“How many leave days do I have?”</p>
+          <p>“What training opportunities are available?”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="industries">
+      <div class="container">
+        <div class="section-label">Where we start</div>
+        <h2>Built for frontline-heavy industries.</h2>
+        <p class="lead">UDAAN can support workforce environments where large distributed teams need simple, accessible and measurable support.</p>
+        <div class="industries">
+          <div class="industry">Construction</div>
+          <div class="industry">Facilities Management</div>
+          <div class="industry">Logistics</div>
+          <div class="industry">Hospitality</div>
+          <div class="industry">Manufacturing</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <h2>Build a better frontline workforce experience.</h2>
+        <p>Talk to UDAAN about your workforce challenges, pilot requirements or enterprise use case.</p>
+        <a class="btn" href="mailto:hello@udaan-ai.com">Request a Demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div><strong>UDAAN AI</strong> — AI-powered workforce intelligence for the frontline.</div>
+      <div>© 2026 UDAAN AI</div>
+    </div>
+  </footer>
+</body>
+</html>
