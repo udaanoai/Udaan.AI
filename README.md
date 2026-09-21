@@ -1,5 +1,6 @@
-# UDAAN AI Website V2
+# UDAAN AI Website V3
+Premium enterprise-style landing page inspired by the approved visual direction.
 
-Premium responsive single-page startup website.
+Before launch, replace `hello@udaan-ai.com` with the real UDAAN contact email.
 
-Replace `hello@udaan-ai.com` in `index.html` with the real contact email before launch.
+Upload all three files to the existing GitHub repository. Netlify will redeploy automatically.
